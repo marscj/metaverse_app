@@ -11,18 +11,29 @@ class AppTranslation {
 
 class LocaleKeys {
   LocaleKeys._();
+  static const app_name = 'app_name';
   static const buttons_login = 'buttons_login';
   static const buttons_sign_in = 'buttons_sign_in';
   static const buttons_logout = 'buttons_logout';
+  static const tabs_xuexi = 'tabs_xuexi';
+  static const tabs_kecheng = 'tabs_kecheng';
+  static const tabs_faxian = 'tabs_faxian';
+  static const tabs_wode = 'tabs_wode';
 }
 
 class Locales {
   static const zh_CN = {
+    'app_name': '元宇宙学院',
     'buttons_login': '登录',
     'buttons_sign_in': '注册',
     'buttons_logout': '注销',
+    'tabs_xuexi': '学习',
+    'tabs_kecheng': '课程',
+    'tabs_faxian': '发现',
+    'tabs_wode': '我的',
   };
   static const en_US = {
+    'app_name': '元宇宙学院',
     'buttons_login': 'Login',
     'buttons_sign_in': 'Sign-in',
     'buttons_logout': 'Logout',

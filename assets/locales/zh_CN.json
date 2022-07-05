@@ -4,5 +4,11 @@
     "login": "登录",
     "sign_in": "注册",
     "logout": "注销"
+  },
+  "tabs": {
+    "xuexi": "学习",
+    "kecheng": "课程",
+    "faxian": "发现",
+    "wode": "我的"
   }
 }

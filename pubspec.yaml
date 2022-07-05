@@ -10,7 +10,7 @@ dependencies:
   get: 4.6.5
   flutter_native_splash: 2.2.4
   get_storage: 2.0.3
-  
+  persistent_bottom_nav_bar: 4.0.2
   flutter: 
     sdk: flutter
 
@@ -23,6 +23,5 @@ dev_dependencies:
 flutter: 
   assets: 
     - assets/
-
   uses-material-design: true
 
