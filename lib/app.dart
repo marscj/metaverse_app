@@ -1,5 +1,8 @@
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:metaverse_app/storage/user.dart';
 
 import 'app/routes/app_pages.dart';
 import 'generated/locales.g.dart';
@@ -26,6 +29,9 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var locale = ui.window.locale;
+    var lang = UserStorage.get()?['lang'];
+
     return GetBuilder<AppController>(
       init: AppController(),
       initState: (state) {},
@@ -34,6 +40,7 @@ class App extends StatelessWidget {
           title: 'app_name'.tr,
           initialRoute: AppPages.INITIAL,
           translationsKeys: AppTranslation.translations,
+          locale: lang == null ? locale : Locale(lang),
           getPages: AppPages.routes,
         );
       },

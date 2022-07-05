@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
-import 'package:metaverse_app/common/my_icon_icons.dart';
+import 'package:metaverse_app/app/modules/home/views/home_tab.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 import '../controllers/home_controller.dart';
@@ -16,24 +17,31 @@ class HomeView extends GetView<HomeController> {
         controller: controller.persistentTabController,
         screens: [
           Container(
-            color: Colors.red,
+            color: Color.fromARGB(255, 231, 201, 199),
           ),
           Container(
             color: Colors.blue,
           ),
           Container(
             color: Colors.green,
-          )
+          ),
+          Container(
+            color: Colors.yellow,
+          ),
         ],
         items: [
-          PersistentBottomNavBarItem(
-              icon: Icon(MyIcon.graduation_cap), title: 'xuexi'.tr),
-          PersistentBottomNavBarItem(
-              icon: Icon(MyIcon.book_open), title: 'kechent'.tr),
-          PersistentBottomNavBarItem(
-              icon: Icon(MyIcon.newspaper), title: 'faxian'.tr),
-          PersistentBottomNavBarItem(icon: Icon(MyIcon.user), title: 'wode'.tr)
-        ],
+          HomeTab('tabs_xuexi'.tr, FontAwesomeIcons.graduationCap),
+          HomeTab('tabs_kecheng'.tr, FontAwesomeIcons.bookOpen),
+          HomeTab('tabs_faxian'.tr, FontAwesomeIcons.earthAsia),
+          HomeTab('tabs_wode'.tr, FontAwesomeIcons.user),
+        ]
+            .map((e) => PersistentBottomNavBarItem(
+                icon: Icon(e.icon),
+                title: e.title,
+                activeColorPrimary: Colors.teal,
+                // activeColorSecondary: Colors.white,
+                inactiveColorPrimary: Colors.grey))
+            .toList(),
         confineInSafeArea: true,
         backgroundColor: Colors.white, // Default is Colors.white.
         handleAndroidBackButtonPress: true, // Default is true.
@@ -60,7 +68,7 @@ class HomeView extends GetView<HomeController> {
           duration: Duration(milliseconds: 200),
         ),
         navBarStyle:
-            NavBarStyle.style1, // Choose the nav bar style with this property.
+            NavBarStyle.simple, // Choose the nav bar style with this property.
       ),
     );
   }
