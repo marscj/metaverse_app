@@ -1,0 +1,8 @@
+{
+  "app_name": "元宇宙学院",
+  "buttons": {
+    "login": "Login",
+    "sign_in": "Sign-in",
+    "logout": "Logout"
+  }
+}
