@@ -17,7 +17,7 @@ class HomeView extends GetView<HomeController> {
         controller: controller.persistentTabController,
         screens: [
           Container(
-            color: Color.fromARGB(255, 231, 201, 199),
+            color: Colors.red,
           ),
           Container(
             color: Colors.blue,
@@ -38,13 +38,15 @@ class HomeView extends GetView<HomeController> {
             .map((e) => PersistentBottomNavBarItem(
                 icon: Icon(e.icon),
                 title: e.title,
+                iconSize: 20,
+                textStyle: TextStyle(fontSize: 10),
                 activeColorPrimary: Colors.teal,
                 // activeColorSecondary: Colors.white,
                 inactiveColorPrimary: Colors.grey))
             .toList(),
         confineInSafeArea: true,
         backgroundColor: Colors.white, // Default is Colors.white.
-        handleAndroidBackButtonPress: true, // Default is true.
+        handleAndroidBackButtonPress: false, // Default is true.
         resizeToAvoidBottomInset:
             true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
         stateManagement: true, // Default is true.
@@ -68,7 +70,7 @@ class HomeView extends GetView<HomeController> {
           duration: Duration(milliseconds: 200),
         ),
         navBarStyle:
-            NavBarStyle.simple, // Choose the nav bar style with this property.
+            NavBarStyle.style6, // Choose the nav bar style with this property.
       ),
     );
   }
