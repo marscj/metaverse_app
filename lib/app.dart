@@ -42,6 +42,9 @@ class App extends StatelessWidget {
           translationsKeys: AppTranslation.translations,
           locale: lang == null ? locale : Locale(lang),
           getPages: AppPages.routes,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.teal),
+          ),
         );
       },
     );
