@@ -5,6 +5,7 @@ linter:
     constant_identifier_names: false
     prefer_const_constructors: false
     avoid_print: false
+    prefer_const_literals_to_create_immutables: false
 
 analyzer: 
   errors:

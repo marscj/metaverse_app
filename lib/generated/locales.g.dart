@@ -15,10 +15,10 @@ class LocaleKeys {
   static const buttons_login = 'buttons_login';
   static const buttons_sign_in = 'buttons_sign_in';
   static const buttons_logout = 'buttons_logout';
-  static const tabs_xuexi = 'tabs_xuexi';
-  static const tabs_kecheng = 'tabs_kecheng';
-  static const tabs_faxian = 'tabs_faxian';
-  static const tabs_wode = 'tabs_wode';
+  static const tabs_study = 'tabs_study';
+  static const tabs_schedule = 'tabs_schedule';
+  static const tabs_find = 'tabs_find';
+  static const tabs_my = 'tabs_my';
 }
 
 class Locales {
@@ -27,10 +27,10 @@ class Locales {
     'buttons_login': '登录',
     'buttons_sign_in': '注册',
     'buttons_logout': '注销',
-    'tabs_xuexi': '学习',
-    'tabs_kecheng': '课程',
-    'tabs_faxian': '发现',
-    'tabs_wode': '我的',
+    'tabs_study': '学习',
+    'tabs_schedule': '课程',
+    'tabs_find': '发现',
+    'tabs_my': '我的',
   };
   static const en_US = {
     'app_name': '元宇宙学院',

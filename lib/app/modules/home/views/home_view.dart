@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
+import 'package:metaverse_app/app/modules/find/views/find_view.dart';
 import 'package:metaverse_app/app/modules/home/views/home_tab.dart';
+import 'package:metaverse_app/app/modules/my/views/my_view.dart';
+import 'package:metaverse_app/app/modules/schedule/views/schedule_view.dart';
+import 'package:metaverse_app/app/modules/study/views/study_view.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 import '../controllers/home_controller.dart';
@@ -15,25 +19,12 @@ class HomeView extends GetView<HomeController> {
       body: PersistentTabView(
         context,
         controller: controller.persistentTabController,
-        screens: [
-          Container(
-            color: Colors.red,
-          ),
-          Container(
-            color: Colors.blue,
-          ),
-          Container(
-            color: Colors.green,
-          ),
-          Container(
-            color: Colors.yellow,
-          ),
-        ],
+        screens: [StudyView(), ScheduleView(), FindView(), MyView()],
         items: [
-          HomeTab('tabs_xuexi'.tr, FontAwesomeIcons.graduationCap),
-          HomeTab('tabs_kecheng'.tr, FontAwesomeIcons.bookOpen),
-          HomeTab('tabs_faxian'.tr, FontAwesomeIcons.earthAsia),
-          HomeTab('tabs_wode'.tr, FontAwesomeIcons.user),
+          HomeTab('tabs_study'.tr, FontAwesomeIcons.graduationCap),
+          HomeTab('tabs_schedule'.tr, FontAwesomeIcons.bookOpen),
+          HomeTab('tabs_find'.tr, FontAwesomeIcons.earthAsia),
+          HomeTab('tabs_my'.tr, FontAwesomeIcons.user),
         ]
             .map((e) => PersistentBottomNavBarItem(
                 icon: Icon(e.icon),

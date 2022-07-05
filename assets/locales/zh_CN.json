@@ -6,9 +6,9 @@
     "logout": "注销"
   },
   "tabs": {
-    "xuexi": "学习",
-    "kecheng": "课程",
-    "faxian": "发现",
-    "wode": "我的"
+    "study": "学习",
+    "schedule": "课程",
+    "find": "发现",
+    "my": "我的"
   }
 }
