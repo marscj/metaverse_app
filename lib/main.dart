@@ -11,5 +11,9 @@ void main() async {
       .then((value) => FlutterNativeSplash.remove());
 
   await GetStorage.init();
-  runApp(App());
+
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: App(),
+  ));
 }
