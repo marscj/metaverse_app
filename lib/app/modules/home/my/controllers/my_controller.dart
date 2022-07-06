@@ -10,7 +10,7 @@ class MyController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    print('my onInit');
+    print('my onReady');
   }
 
   @override

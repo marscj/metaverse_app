@@ -61,7 +61,7 @@ class HomeView extends GetView<HomeController> {
         //   duration: Duration(milliseconds: 200),
         // ),
         navBarStyle:
-            NavBarStyle.style6, // Choose the nav bar style with this property.
+            NavBarStyle.style12, // Choose the nav bar style with this property.
       ),
     );
   }

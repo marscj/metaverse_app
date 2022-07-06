@@ -10,7 +10,7 @@ class ScheduleController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    print('schedule onInit');
+    print('schedule onReady');
   }
 
   @override
