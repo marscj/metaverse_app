@@ -10,6 +10,7 @@ linter:
     prefer_const_literals_to_create_immutables: false
     unnecessary_this: false
     unnecessary_overrides: false
+    library_private_types_in_public_api: false
     
 
 analyzer: 

@@ -12,7 +12,7 @@ class BottomNavStyle5 extends StatelessWidget {
       PersistentBottomNavBarItem item, bool isSelected, double? height) {
     return this.navBarEssentials!.navBarHeight == 0
         ? SizedBox.shrink()
-        : Container(
+        : SizedBox(
             width: 150.0,
             height: height! / 1,
             child: Container(
@@ -27,12 +27,10 @@ class BottomNavStyle5 extends StatelessWidget {
                       data: IconThemeData(
                           size: item.iconSize,
                           color: isSelected
-                              ? (item.activeColorSecondary == null
-                                  ? item.activeColorPrimary
-                                  : item.activeColorSecondary)
-                              : item.inactiveColorPrimary == null
-                                  ? item.activeColorPrimary
-                                  : item.inactiveColorPrimary),
+                              ? (item.activeColorSecondary ??
+                                  item.activeColorPrimary)
+                              : item.inactiveColorPrimary ??
+                                  item.activeColorPrimary),
                       child: isSelected
                           ? item.icon
                           : item.inactiveIcon ?? item.icon,
@@ -44,9 +42,8 @@ class BottomNavStyle5 extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100.0),
                         color: isSelected
-                            ? (item.activeColorSecondary == null
-                                ? item.activeColorPrimary
-                                : item.activeColorSecondary)
+                            ? (item.activeColorSecondary ??
+                                item.activeColorPrimary)
                             : Colors.transparent),
                   ),
                 ],

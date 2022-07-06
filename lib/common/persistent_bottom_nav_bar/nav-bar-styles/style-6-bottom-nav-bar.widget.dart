@@ -41,7 +41,7 @@ class _BottomNavStyle6State extends State<BottomNavStyle6>
           .animate(_animationControllerList[i]));
     }
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _animationControllerList[_selectedIndex!].forward();
     });
   }
@@ -54,7 +54,7 @@ class _BottomNavStyle6State extends State<BottomNavStyle6>
             animation: _animationList[itemIndex],
             builder: (context, child) => Transform.scale(
               scale: _animationList[itemIndex].value,
-              child: Container(
+              child: SizedBox(
                 width: 150.0,
                 height: height,
                 child: Container(
@@ -69,12 +69,10 @@ class _BottomNavStyle6State extends State<BottomNavStyle6>
                           data: IconThemeData(
                               size: item.iconSize,
                               color: isSelected
-                                  ? (item.activeColorSecondary == null
-                                      ? item.activeColorPrimary
-                                      : item.activeColorSecondary)
-                                  : item.inactiveColorPrimary == null
-                                      ? item.activeColorPrimary
-                                      : item.inactiveColorPrimary),
+                                  ? (item.activeColorSecondary ??
+                                      item.activeColorPrimary)
+                                  : item.inactiveColorPrimary ??
+                                      item.activeColorPrimary),
                           child: isSelected
                               ? item.icon
                               : item.inactiveIcon ?? item.icon,
@@ -92,17 +90,13 @@ class _BottomNavStyle6State extends State<BottomNavStyle6>
                                     style: item.textStyle != null
                                         ? (item.textStyle!.apply(
                                             color: isSelected
-                                                ? (item.activeColorSecondary ==
-                                                        null
-                                                    ? item.activeColorPrimary
-                                                    : item.activeColorSecondary)
+                                                ? (item.activeColorSecondary ??
+                                                    item.activeColorPrimary)
                                                 : item.inactiveColorPrimary))
                                         : TextStyle(
                                             color: isSelected
-                                                ? (item.activeColorSecondary ==
-                                                        null
-                                                    ? item.activeColorPrimary
-                                                    : item.activeColorSecondary)
+                                                ? (item.activeColorSecondary ??
+                                                    item.activeColorPrimary)
                                                 : item.inactiveColorPrimary,
                                             fontWeight: FontWeight.w400,
                                             fontSize: 12.0),
