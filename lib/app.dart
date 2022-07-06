@@ -43,7 +43,7 @@ class App extends StatelessWidget {
           fallbackLocale: Locale('zh'),
           getPages: AppPages.routes,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.teal),
+            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red),
           ),
         );
       },

@@ -27,13 +27,13 @@ class HomeView extends GetView<HomeController> {
           HomeTab('tabs_my'.tr, FontAwesomeIcons.user),
         ]
             .map((e) => PersistentBottomNavBarItem(
-                icon: Icon(e.icon),
-                title: e.title,
-                iconSize: 20,
-                textStyle: TextStyle(fontSize: 10),
-                activeColorPrimary: Colors.teal,
-                // activeColorSecondary: Colors.white,
-                inactiveColorPrimary: Colors.grey))
+                  icon: Icon(e.icon),
+                  title: e.title,
+                  iconSize: 20,
+                  textStyle: TextStyle(fontSize: 10),
+                  activeColorPrimary: Theme.of(context).colorScheme.primary,
+                  inactiveColorPrimary: Colors.grey,
+                ))
             .toList(),
         confineInSafeArea: true,
         backgroundColor: Colors.white, // Default is Colors.white.
@@ -61,7 +61,7 @@ class HomeView extends GetView<HomeController> {
         //   duration: Duration(milliseconds: 200),
         // ),
         navBarStyle:
-            NavBarStyle.style12, // Choose the nav bar style with this property.
+            NavBarStyle.simple, // Choose the nav bar style with this property.
       ),
     );
   }
