@@ -1,7 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:metaverse_app/storage/user.dart';
 
 import 'app/routes/app_pages.dart';
@@ -41,6 +40,7 @@ class App extends StatelessWidget {
           initialRoute: AppPages.INITIAL,
           translationsKeys: AppTranslation.translations,
           locale: lang == null ? locale : Locale(lang),
+          fallbackLocale: Locale('zh'),
           getPages: AppPages.routes,
           theme: ThemeData(
             colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.teal),

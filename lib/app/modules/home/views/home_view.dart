@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
-import 'package:metaverse_app/app/modules/home/find/views/find_view.dart';
-import 'package:metaverse_app/app/modules/home/my/views/my_view.dart';
-import 'package:metaverse_app/app/modules/home/schedule/views/schedule_view.dart';
-import 'package:metaverse_app/app/modules/home/study/views/study_view.dart';
+import 'package:metaverse_app/app/modules/home/screen/find/views/find_view.dart';
+import 'package:metaverse_app/app/modules/home/screen/my/views/my_view.dart';
+import 'package:metaverse_app/app/modules/home/screen/schedule/views/schedule_view.dart';
+import 'package:metaverse_app/app/modules/home/screen/study/views/study_view.dart';
 import 'package:metaverse_app/app/modules/home/views/home_tab.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
