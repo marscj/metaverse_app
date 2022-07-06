@@ -170,7 +170,7 @@ class MyHttp extends DioForNative {
 
   MyHttp._internal() : super() {
     options = BaseOptions(
-        baseUrl: Config.HTTP_HOST,
+        baseUrl: ConfigEnvironments.getEnvironments()['url']!,
         connectTimeout: 10000,
         receiveTimeout: 10000);
 

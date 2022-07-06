@@ -7,7 +7,7 @@ import 'package:metaverse_app/app/modules/home/screen/my/views/my_view.dart';
 import 'package:metaverse_app/app/modules/home/screen/schedule/views/schedule_view.dart';
 import 'package:metaverse_app/app/modules/home/screen/study/views/study_view.dart';
 import 'package:metaverse_app/app/modules/home/views/home_tab.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
+import 'package:metaverse_app/common/persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 import '../controllers/home_controller.dart';
 

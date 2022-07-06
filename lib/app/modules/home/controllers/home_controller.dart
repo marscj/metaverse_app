@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
+import 'package:metaverse_app/common/persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class HomeController extends GetxController {
   //TODO: Implement HomeController

@@ -45,6 +45,7 @@ class App extends StatelessWidget {
           theme: ThemeData(
             colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red),
           ),
+          debugShowCheckedModeBanner: false,
         );
       },
     );
