@@ -170,7 +170,9 @@ class MyHttp extends DioForNative {
 
   MyHttp._internal() : super() {
     options = BaseOptions(
-        baseUrl: Config.HTTP_HOST, connectTimeout: 5000, receiveTimeout: 5000);
+        baseUrl: Config.HTTP_HOST,
+        connectTimeout: 10000,
+        receiveTimeout: 10000);
 
     interceptors.add(InterceptorsWrapper(onRequest: (options, handler) {
       // Do something before request is sent
@@ -191,5 +193,7 @@ class MyHttp extends DioForNative {
       // 如果你想完成请求并返回一些自定义数据，可以resolve 一个`Response`,如`handler.resolve(response)`。
       // 这样请求将会被终止，上层then会被调用，then中返回的数据将是你的自定义response.
     }));
+
+    interceptors.add(LogInterceptor(responseBody: true));
   }
 }
