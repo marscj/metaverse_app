@@ -5,10 +5,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:metaverse_app/utils/http/myhttp.dart';
 
 import 'app.dart';
+import 'services/auth_service.dart';
 
 _parseAndDecode(String response) {
   return jsonDecode(response);
@@ -20,8 +22,7 @@ parseJson(String text) {
 
 void main() async {
   //初始化 dio
-  (MyHttp().dio.transformer as DefaultTransformer).jsonDecodeCallback =
-      parseJson;
+  (MyHttp().transformer as DefaultTransformer).jsonDecodeCallback = parseJson;
 
   //初始化闪屏
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -31,6 +32,9 @@ void main() async {
 
   //初始化缓存
   await GetStorage.init();
+
+  //路由守护
+  await Get.putAsync(() => AuthService().init());
 
   //禁止横屏
   WidgetsFlutterBinding.ensureInitialized();

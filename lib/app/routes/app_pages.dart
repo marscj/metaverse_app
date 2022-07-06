@@ -19,6 +19,9 @@ class AppPages {
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
+      // middlewares: [
+      //   AuthGuard(),
+      // ],
     ),
     GetPage(
       name: _Paths.SIGNUP,
