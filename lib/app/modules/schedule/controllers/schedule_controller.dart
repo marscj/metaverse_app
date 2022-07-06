@@ -1,23 +1,20 @@
 import 'package:get/get.dart';
 
 class ScheduleController extends GetxController {
-  //TODO: Implement ScheduleController
-
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    print('schedule onInit');
   }
 
   @override
   void onReady() {
     super.onReady();
+    print('schedule onInit');
   }
 
   @override
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
